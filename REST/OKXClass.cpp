@@ -8,6 +8,7 @@
 #include <openssl/buffer.h>
 #include <curl/curl.h>
 #include <nlohmann/json.hpp>
+#include <sstream>
 
 size_t OKXClass::WriteCallback(void *contents, size_t size, size_t nmemb, std::string *output)
 {

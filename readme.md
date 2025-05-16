@@ -15,6 +15,8 @@ This repository contains a C++ application that accomplishes the following tasks
 - C++ compiler
 - Standard C++ libraries
 
+### Or you can build the binary using CMake and conan.
+
 ## How to Run
 1. Clone the repository to your local machine.
 2. Compile the C++ files using your preferred C++ compiler (e.g., g++):
@@ -25,6 +27,29 @@ This repository contains a C++ application that accomplishes the following tasks
      g++ main.cpp -o main CalculationClass.cpp WebSocketClass.cpp -lssl -lcrypto
      ```
 4. Run the compiled executable.
+
+### Using Cmake and Conan
+1. Install Conan.
+2. Install required libraries using
+    ```bash
+    conan install . --output-folder=build --build=missing
+    ```
+3. Go to the build directory and invoke build
+    ```bash
+    cd build
+    cmake .. -DCMAKE_TOOLCHAIN_FILE=./build/Release/generators/conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+    cmake --build . 
+    ```
+  Compilation is complete now.
+4. Run Using the binaries in the build folder.
+  ```bash
+  ./WebSocket/websocket_client 
+  ```
+  or
+  ```bash
+  ./REST/rest_client
+  ```
+
 
 ## Files Structure
 ```
