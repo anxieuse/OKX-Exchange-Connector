@@ -1,0 +1,9 @@
+{
+  "OKXDataSrc": {
+    "url_pub": "wss://ws.okx.com:8443/ws/v5/public",
+    "url_private": "wss://ws.okx.com:8443/ws/v5/private",
+    "API_key": "your_production_api_key_here",
+    "API_secret": "your_production_api_secret_here",
+    "API_passphrase": "your_production_passphrase_here"
+  }
+} 
